@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../shared/services/music/music.service';
+
+import { Song } from '../shared/models/song.model';
 
 @Component({
   selector: 'app-music',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
-  constructor() { }
+  songs: Song[];
+
+  constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {
   }
